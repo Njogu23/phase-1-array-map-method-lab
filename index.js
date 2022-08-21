@@ -12,5 +12,14 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+
+  //spliting the array sentences  into arrays of single word strings
+  const splitArray =tutorials.map(item => item.split(' '))
+
+  //titleCasing the strings then joing them back together
+  const titleCasing = splitArray.map(item2 =>
+     item2.map(item3 => 
+      item3.charAt(0).toUpperCase() + item3.slice(1)).join(' '))
+
+      return titleCasing
 }
